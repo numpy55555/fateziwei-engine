@@ -1,93 +1,104 @@
 # Fate Ziwei (命运紫微) · Deterministic Astrology Engine & Multilingual Platform
 
-[![Live Platform](https://img.shields.io/badge/Platform-fateziwei.com-purple)](https://fateziwei.com)
-[![Languages](https://img.shields.io/badge/Languages-10%20Locales-blue)](https://fateziwei.com/en)
-[![Accuracy Test](https://img.shields.io/badge/Engine%20Precision-560%2F560%20Verified-brightgreen)](https://fateziwei.com/zh/famous)
-[![Historical Charts](https://img.shields.io/badge/Historical%20Figures-11%2C669%20Charts-gold)](https://fateziwei.com/zh/famous)
-[![PDF Pipeline](https://img.shields.io/badge/Export-True--Mirror%20Vector%20PDF-red)](https://fateziwei.com/book/sample)
+<p align="center">
+  <a href="README.md"><strong>English</strong></a> •
+  <a href="README.zh-CN.md"><strong>简体中文</strong></a> •
+  <a href="README.zh-TW.md"><strong>繁體中文</strong></a> •
+  <a href="README.ja.md"><strong>日本語</strong></a>
+</p>
 
-**Fate Ziwei** is an advanced Eastern astrology platform combining high-precision deterministic calendar calculation with native multilingual AI-written life readings. It covers the full spectrum of traditional Chinese forecasting and research tools, serving global users in 10 languages across web and mobile.
-
-**命运紫微 (FateZiwei)** 是融合高精度传统历法确定性计算与十语种原生 AI 命书推演的综合性东方术数平台。排盘是确定性数学与天文学计算，解读基于传世文献与现代大模型原生撰写。
-
-🔗 **Official Portal (官网总入口)**: [https://fateziwei.com](https://fateziwei.com)  
-📖 **English Portal**: [https://fateziwei.com/en](https://fateziwei.com/en) | 🇭🇰 **港台繁中**: [https://fateziwei.com/tw](https://fateziwei.com/tw) | 🇨🇳 **大陆简中**: [https://fateziwei.com/zh](https://fateziwei.com/zh)
-
----
-
-## 🚀 核心自研技术底座 (Core Technical Highlights)
-
-### 1. 确定性高精度历法引擎 (Deterministic Charting Engine)
-- **560/560 字段级测试用例全量验证**：覆盖极端历法边界，排盘精度达到字段级 100% 零误差一致性。
-- **地理经纬度真太阳时校正**：内置全国与全球城市经度数据库，自动补偿平太阳时与真太阳时时差，彻底解决跨时区与地方时生辰偏差。
-- **复杂流派与历法配置**：
-  - 支持农历闰月智能分界与平月对齐；
-  - 早子时（00:00–01:00）与晚子时（23:00–24:00）归属流派切换；
-  - 中州派、三合派等四化飞星、月干推算法与虚岁计算灵活配置。
-- **4×4 宫格交互与六层运限穿透**：本命盘、大限（十年）、流年（一年）、流月、流日、流时六层盘面毫秒级联动，三方四正穿心连线与人生 K 线态势图直观呈现。
-
-### 2. 十语种原生 AI 命书系统 (Native Multilingual AI Life Books)
-- **原生母语生成（非机械翻译）**：支持 10 种语言原生输出（英语 EN、繁体中文 TW、简体中文 ZH、日语 JA、韩语 KO、越南语 VI、法语 FR、俄语 RU、西班牙语 ES、德语 DE）。日语严格遵循现代假名文体，韩语采用纯正谚文，欧美语系对标西方占星术语（Sun sign / 12 Houses / Planetary transits），避免机翻生硬感。
-- **30 页五卷个人命书与 2027 流年年书**：
-  - 卷一：本命格局总览与核心星曜特质
-  - 卷二：大限十年运势起伏轨迹
-  - 卷三：十四主星庙旺平陷逐星详解
-  - 卷四：十二宫位（事业、财帛、夫妻、田宅等）逐宫详批
-  - 卷五：流年四化引动、风水调理建议与人生曲线走势
-- **真镜像双遍法矢量 PDF 渲染管线 (True-Mirror 2-Pass PDF Pipeline)**：
-  - 基于 `jspdf 4 + pdf-lib`：Pass 1 零边距覆满紫金典雅封面，Pass 2 毫米级页眉页脚（12mm/10mm）与版面规整；
-  - 思源宋体、霞鹜文楷子集 CID 矢量嵌入（零 Type 3 字体），放大百倍字迹边缘依旧锐利，直出 9 语样张 PDF。
-
-### 3. 11,669 历史人物命盘库与 13 部古籍文献库
-- **大规模历史人物实库**：整理收录自唐代诸帝、宋代文人、明清缙绅等 11,669 位历史名人的真实命盘数据；
-- **55 篇深度精修史实考证**：针对苏轼、朱元璋、王阳明、曾国藩等历史一线人物，结合正史本传史料锚点逐宫复盘人生起伏；
-- **62 种大格局实库大数据分布**：破除“吉凶绝对论”，通过万人实库大数据揭示“禄逢冲破”、“化忌入命”在历史成功人物中的真实占比；
-- **13 部古典文献 2,366 段古籍检索**：集成《紫微斗数全书》《全集》《太微赋》《形性赋》等经典古文献，实现解读与古籍原文精准溯源。
-
-### 4. 纯 Canvas 2D 超清社交分享卡 (ShareCard)
-- 告别传统 `html2canvas` 跨浏览器乱序与字体变形缺陷，全链路基于 Canvas 2D 手绘单源渲染；
-- 离屏导出 2004×2985 @3x 印刷级超清海报，深空星夜背景、鎏金双线外框、太极图徽、四柱八字与三方四正高亮连线一键成图。
+<p align="center">
+  <a href="https://fateziwei.com"><img src="https://img.shields.io/badge/Platform-fateziwei.com-purple" alt="Live Platform"></a>
+  <a href="https://fateziwei.com/en"><img src="https://img.shields.io/badge/Languages-10%20Locales-blue" alt="Languages"></a>
+  <a href="https://fateziwei.com/zh/famous"><img src="https://img.shields.io/badge/Engine%20Precision-560%2F560%20Verified-brightgreen" alt="Accuracy Test"></a>
+  <a href="https://fateziwei.com/zh/famous"><img src="https://img.shields.io/badge/Historical%20Figures-11%2C669%20Charts-gold" alt="Historical Charts"></a>
+  <a href="https://fateziwei.com/zh/book/sample"><img src="https://img.shields.io/badge/Export-True--Mirror%20Vector%20PDF-red" alt="PDF Pipeline"></a>
+</p>
 
 ---
 
-## 🛠️ 东方术数大一统功能矩阵 (Comprehensive Suite)
+## 🌟 Overview
 
-| 模块类别 | 核心功能 | 说明与特色 |
-|---|---|---|
-| **紫微斗数** | `/pan` · 十二宫与六层运限 | 4×4 经典盘、四化飞星、大限旅程、人生 K 线、真太阳时 |
-| **四柱八字** | `/bazi` · 八字命盘 | 四柱天干地支、藏干十神、大运流年、五行生克旺衰 |
-| **双人合盘** | `/hepan` · `/compatibility` | 夫妻、合伙、人际五维契合度评分、流年婚恋动点分析 |
-| **易卦纳甲** | `/wengua/liuyao` · 六爻预测 | 铜钱摇卦、纳甲世应、六亲六神变卦与卦证倾向分析 |
-| **梅花心易** | `/wengua/meihua` · 梅花易数 | 时间起卦、数字起卦，本卦、互卦、变卦体用断法 |
-| **奇门遁甲** | `/wengua/qimen` · 奇门排盘 | 时家转盘拆补法、九宫八门九星三奇六仪飞布 |
-| **诸葛小六壬**| `/wengua/xiaoliuren` · 小六壬 | 掐指六宫（大安/留连/速喜/赤口/小吉/空亡）即时简断 |
-| **观音灵签** | `/wengua/lingqian` · 观音百签 | 经典观音灵签 100 签全解，签诗断语与古人典故 |
-| **河洛理数** | `/wengua/heluo` · 河洛命卦 | 天地数配卦，先后天命卦与流年运数推演 |
-| **姓名学** | `/xingming` · 测名与起名 | 繁简汉字笔画、五格三才数理配置与生辰喜用神智能候选 |
-| **工具箱** | `/gongju` · 辅助推演 | 出生时辰盲反推、风水方位九宫布局、命运双生子对比 |
-| **每日黄历** | 今日宜忌与每日一签 | 传统天干地支吉凶、神煞宜忌、彭祖百忌与每日灵感签卡 |
+**Fate Ziwei** is an advanced Eastern astrology and divination platform combining high-precision deterministic calendar calculations with native multilingual AI-authored life books. It bridges classical Eastern metaphysics (Purple Star Astrology / Ziwei Dou Shu, Four Pillars of Destiny / Bazi, I Ching hexagrams, Qimen Dunjia) with modern web engineering, astronomical ephemeris models, and large language models.
+
+- 🌐 **Official Website**: [https://fateziwei.com](https://fateziwei.com)
+- 📖 **Global English Edition**: [https://fateziwei.com/en](https://fateziwei.com/en)
+- 🇭🇰 **Traditional Chinese (Hong Kong / Taiwan)**: [https://fateziwei.com/tw](https://fateziwei.com/tw)
+- 🇨🇳 **Simplified Chinese (Mainland China)**: [https://fateziwei.com/zh](https://fateziwei.com/zh)
+- 🇯🇵 **Japanese Portal**: [https://fateziwei.com/ja](https://fateziwei.com/ja)
 
 ---
 
-## 🌐 多语言在线入口直达 (Global Portals)
+## ⚡ Core Technical Architectures
+
+### 1. Deterministic Astronomical Calendar Engine
+- **Field-Level Precision Verification**: Validated against 560/560 standard astrological test cases covering Southern/Northern hemisphere conversions, leap months, and timezone transitions with 100% precision.
+- **True Solar Time (TST) Calibration**: Built-in global latitude and longitude geocoding database for real-time equation of time (EoT) calculation and true local solar time alignment.
+- **Configurable Lineage Rules**: Comprehensive support for Sanhe (三合) and Si-Hua (四化) schools, Early/Late Zi hour (早子时/晚子时) splitting, and multiple leap month assignment algorithms.
+
+### 2. Native Multilingual AI Life Book & Two-Pass Vector PDF Pipeline
+- **Native Multilingual Synthesis**: Unlike traditional machine translation, AI prompts and astronomical context models generate native literary interpretations in 10 languages independently.
+- **30-Page Five-Volume Opus**: A complete, comprehensive life blueprint covering Core Destiny, Five Major Domains, Decade Pillars, Annual Transit Horizons, and Classical Verse Inscriptions.
+- **Two-Pass Vector PDF Engine**: Custom server-side and browser canvas pipeline combining jsPDF and pdf-lib. Features zero-margin vector covers, vector glyph font embedding, and bleed-safe layout composition.
+
+### 3. Unified Eastern Divination & Metaphysics Matrix
+- **Ziwei Dou Shu (紫微斗数)**: Natal chart, 10-Year Major Periods (大限), Annual Fortune (流年), Monthly Flow (流月), Daily Horizon (流日), and Flowing Hours (流时).
+- **Four Pillars of Destiny (八字四柱)**: Solar term astronomical transitions, Ten Gods (十神), Stem-Branch Hidden Stems (藏干), and Five Element balance metrics.
+- **Synastry & Relationship Compatibility (双人合盘 / 合婚)**: Multi-dimensional natal chart cross-aspecting, star synergy analysis, and relationship dynamics score.
+- **Hexagram & Oracle Suite**: Plum Blossom Divination (梅花易数), Six Lines Najia (六爻纳甲), Qimen Dunjia (奇门遁甲), Small Six Ren (小六壬), Guanyin 100 Oracles (观音灵签), and Heluo Rational Numbers (河洛理数).
+- **Advanced Tools**: Birth hour reverse-inference (时辰反推), Feng Shui Nine-Palace Flying Star grid, and Destiny Twins comparative analysis.
+
+### 4. 11,669 Historical Figures & Classical Literature Corpus
+- **Massive Historical Corpus**: 11,669 verified historical figure charts and 55 meticulously verified historical figures aligned with official dynastic histories (*Twenty-Four Histories*).
+- **Statistical Macro-Patterns**: Big data distribution analysis across 62 major structural patterns (e.g., Monarch-Vassal Alignment, Stone Pearl Emergence, Dual Star Formations).
+- **2,366 Classical Excerpts**: Indexed cross-references to 13 fundamental classical treatises including *Ziwei Doushu Quanshu*, *Taiwei Fu*, and *Xingtan Fu*.
+
+### 5. Canvas 2D Ultra-HD Poster Rendering Engine
+- **Ultra-HD Resolution**: 2004×2985 resolution rendered at @3x retina scale.
+- **Dynamic Geometric Tracing**: Real-time vector rendering of San-Fang-Si-Zheng (三方四正) aspect lines, dynamic Si-Hua flying star vectors, and personalized calligraphy stamps.
+
+---
+
+## 🗂️ Complete Feature Matrix
+
+| Module | Core Functionality | Technical Highlights |
+| :--- | :--- | :--- |
+| **Astrological Natal Chart** | Ziwei Dou Shu & Bazi Dual Engine | 12 Palaces, San-Fang-Si-Zheng aspect lines, True Solar Time calibration |
+| **Transit Horizons** | Decade / Annual / Monthly / Daily / Hourly | Dynamic flying stars, annual Si-Hua changes, transit star overlays |
+| **AI Life Book** | 30-Page Five-Volume Comprehensive Book | Native 10-language generation, two-pass vector PDF export |
+| **Synastry Analysis** | Relationship & Compatibility | Multi-dimensional palace resonance, star synergy scoring |
+| **Hexagram Suite** | 6 Classical Divination Systems | I Ching, Plum Blossom, Qimen Dunjia, Guanyin 100 Oracles |
+| **Historical Big Data** | 11,669 Historical Figures & 62 Patterns | Big data pattern frequency, 2,366 classical quote cross-references |
+| **Specialized Tools** | Hour Inference & Destiny Twins | Reverse hour calculation, Feng Shui Nine-Palace grid |
+| **Almanac & Oracles** | Daily Auspiciousness & Oracle Card | Stems & Branches fortune, daily divination card |
+
+---
+
+## 🌐 Global Online Portals
 
 - 🌐 **English (Global)**: [https://fateziwei.com/en](https://fateziwei.com/en)
-- 🇭🇰 **繁體中文 (港澳台/海外)**: [https://fateziwei.com/tw](https://fateziwei.com/tw)
-- 🇨🇳 **简体中文 (大陆)**: [https://fateziwei.com/zh](https://fateziwei.com/zh)
-- 🇯🇵 **日本語**: [https://fateziwei.com/ja](https://fateziwei.com/ja)
-- 🇰🇷 **한국어**: [https://fateziwei.com/ko](https://fateziwei.com/ko)
-- 🇻🇳 **Tiếng Việt**: [https://fateziwei.com/vi](https://fateziwei.com/vi)
-- 🇫🇷 **Français**: [https://fateziwei.com/fr](https://fateziwei.com/fr)
-- 🇪🇸 **Español**: [https://fateziwei.com/es](https://fateziwei.com/es)
-- 🇩🇪 **Deutsch**: [https://fateziwei.com/de](https://fateziwei.com/de)
-- 🇷🇺 **Русский**: [https://fateziwei.com/ru](https://fateziwei.com/ru)
+- 🇭🇰 **Traditional Chinese (Hong Kong / Taiwan)**: [https://fateziwei.com/tw](https://fateziwei.com/tw)
+- 🇨🇳 **Simplified Chinese (Mainland China)**: [https://fateziwei.com/zh](https://fateziwei.com/zh)
+- 🇯🇵 **Japanese**: [https://fateziwei.com/ja](https://fateziwei.com/ja)
+- 🇰🇷 **Korean**: [https://fateziwei.com/ko](https://fateziwei.com/ko)
+- 🇻🇳 **Vietnamese**: [https://fateziwei.com/vi](https://fateziwei.com/vi)
+- 🇫🇷 **French**: [https://fateziwei.com/fr](https://fateziwei.com/fr)
+- 🇪🇸 **Spanish**: [https://fateziwei.com/es](https://fateziwei.com/es)
+- 🇩🇪 **German**: [https://fateziwei.com/de](https://fateziwei.com/de)
+- 🇷🇺 **Russian**: [https://fateziwei.com/ru](https://fateziwei.com/ru)
 
 ---
 
-## 📖 核心落地页与样张体验 (Features & Samples)
+## 📖 Key Pages & Feature Direct Links
 
-- **2027 流年运势专题页**: [https://fateziwei.com/zh/liunian-2027](https://fateziwei.com/zh/liunian-2027)
-- **历史名人命盘库 (Famous Charts)**: [https://fateziwei.com/zh/famous](https://fateziwei.com/zh/famous)
-- **命书样张在线预览 (Sample Book)**: [https://fateziwei.com/zh/book/sample](https://fateziwei.com/zh/book/sample)
-- **双人合婚测试 (Compatibility)**: [https://fateziwei.com/zh/hehun](https://fateziwei.com/zh/hehun)
-- **紫微斗数文库与 Q&A**: [https://fateziwei.com/zh/wiki](https://fateziwei.com/zh/wiki) | [https://fateziwei.com/zh/qa](https://fateziwei.com/zh/qa)
+- **2027 Annual Transit Horizon**: [https://fateziwei.com/zh/liunian-2027](https://fateziwei.com/zh/liunian-2027)
+- **Historical Figures Database**: [https://fateziwei.com/zh/famous](https://fateziwei.com/zh/famous)
+- **Sample AI Life Book**: [https://fateziwei.com/zh/book/sample](https://fateziwei.com/zh/book/sample)
+- **Synastry & Compatibility Analysis**: [https://fateziwei.com/zh/hehun](https://fateziwei.com/zh/hehun)
+- **Ziwei Knowledge Base & Wiki**: [https://fateziwei.com/zh/wiki](https://fateziwei.com/zh/wiki) | [https://fateziwei.com/zh/qa](https://fateziwei.com/zh/qa)
+
+---
+
+## ⚖️ License & Notice
+
+The calculation architecture and documentation are maintained for open research and platform showcase. For inquiries or integration, visit [fateziwei.com](https://fateziwei.com).
